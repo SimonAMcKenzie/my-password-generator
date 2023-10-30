@@ -77,3 +77,35 @@ You are required to submit the following for review:
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+#My Password Generator Project
+
+
+
+##Credits
+
+Arrays in JavaScript:
+
+MDN Web Docs - Arrays: MDN Web Docs provide comprehensive information on JavaScript arrays, including how to create and manipulate arrays.
+
+Functions in JavaScript:
+
+MDN Web Docs - Functions: MDN Web Docs offer detailed explanations about JavaScript functions, including how to define and use them.
+
+User Input in JavaScript:
+
+MDN Web Docs - Window.prompt(): Learn how to use the prompt() function to get user input from MDN Web Docs.
+
+Random Number Generation in JavaScript:
+
+MDN Web Docs - Math.random(): MDN Web Docs explain how to generate random numbers using the Math.random() function.
+
+DOM Manipulation in JavaScript:
+
+MDN Web Docs - Document Object Model (DOM): Understand the basics of DOM manipulation in JavaScript from MDN Web Docs.
+
+HTML and CSS Basics:
+
+MDN Web Docs - HTML Basics: Learn the basics of HTML, the structure of web pages, from MDN Web Docs.
+
+MDN Web Docs - CSS Basics: Understand the fundamentals of CSS, the language used for styling web pages, from MDN Web Docs.

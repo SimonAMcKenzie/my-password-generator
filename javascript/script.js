@@ -89,9 +89,26 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
-function getPasswordOptions() {
 
+function getPasswordOptions(password) { // This creates the prompt the user sees
+  var length = parseInt(prompt("Enter password length (between 8 and 128 characters):"));
+
+  if (isNaN(length) || length < 8 || length > 128) { // This defines the min and max password character limit
+    alert("Password length must be a number between 8 and 128.");
+    return null;
 }
+
+// Below are array lists for each type of character to be included in the password
+var includeSpecialCharacters = confirm("Include sepcial characters?");
+var includeNumericCharacters = confirm("Include numeric characters?");
+var includeLowerCasedCharacters = confirm("Include lowercase characters?");
+var includeUpperCasedCharacters = confirm("Include uppercase characters?");
+
+if (!includeSpecialCharacters && !includeNumericCharacters && !includedLowerCasedCharacters &&!includeUpperCasedCharacters);
+  alert("Must include atleast 1 character from of each character type.");
+    return null;
+}
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
