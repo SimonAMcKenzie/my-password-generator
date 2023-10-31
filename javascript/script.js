@@ -73,6 +73,24 @@ function generatePasswordWithOptions(options) {
   return password.join('');
 }
 
+// Get reference to the #copy button
+var copyBtn = document.querySelector('#copy');
+
+// Add event listener to copy button
+copyBtn.addEventListener('click', function() {
+  var generatedPassword = passwordText.value;
+  if (generatedPassword) {
+    navigator.clipboard.writeText(generatedPassword).then(function() {
+      alert('Password copied to clipboard!');
+    }).catch(function(err) {
+      console.error('Failed to copy text: ', err);
+    });
+  } else {
+    alert('No password generated to copy!');
+  }
+});
+
+
 // Function to get a random element from an array
 function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);
