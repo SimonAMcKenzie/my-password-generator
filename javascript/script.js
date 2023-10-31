@@ -90,34 +90,79 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 
-function getPasswordOptions(password) { // This creates the prompt the user sees
+function getPasswordOptions() { // This creates the prompt the user sees
   var length = parseInt(prompt("Enter password length (between 8 and 128 characters):"));
 
   if (isNaN(length) || length < 8 || length > 128) { // This defines the min and max password character limit
     alert("Password length must be a number between 8 and 128.");
     return null;
-}
+  }
 
-// Below are array lists for each type of character to be included in the password
-var includeSpecialCharacters = confirm("Include sepcial characters?");
-var includeNumericCharacters = confirm("Include numeric characters?");
-var includeLowerCasedCharacters = confirm("Include lowercase characters?");
-var includeUpperCasedCharacters = confirm("Include uppercase characters?");
+  // Below are array lists for each type of character to be included in the password
+  includeSpecialCharacters = confirm("Include special characters?"),
+  includeNumericCharacters = confirm("Include numeric characters?"),
+  includeLowerCasedCharacters = confirm("Include lowercase characters?"),
+  includeUpperCasedCharacters = confirm("Include uppercase characters?")
 
-if (!includeSpecialCharacters && !includeNumericCharacters && !includedLowerCasedCharacters &&!includeUpperCasedCharacters);
-  alert("Must include atleast 1 character from of each character type.");
+if (!includeSpecialCharacters && !includeNumericCharacters && !includeLowerCasedCharacters && !includeUpperCasedCharacters) {
+    alert("Must include at least 1 character from each character type.");
     return null;
 }
 
+  var passwordOptions = {
+    length: length,
+    includeSpecialCharacters: includeSpecialCharacters,
+    includeNumericCharacters: includeNumericCharacters,
+    includeLowerCasedCharacters: includeLowerCasedCharacters,
+    includeUpperCasedCharacters: includeUpperCasedCharacters
+  };
+
+  return passwordOptions;
+}
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
 
 // Function to generate password with user input
 function generatePassword() {
+  var options = getPasswordOptions();
 
+  if (!options) {
+    return "";
+  }
+
+  var allCharacters = [];
+  var password = [];
+
+  if (options.includeSpecialCharacters) {
+    allCharacters = allCharacters.concat(specialCharacters);
+    password.push(getRandom(specialCharacters));
+  }
+
+  if (options.includeNumericCharacters) {
+    allCharacters = allCharacters.concat(numericCharacters);
+    password.push(getRandom(numericCharacters));
+  }
+
+  if (options.includeLowerCasedCharacters) {
+    allCharacters = allCharacters.concat(lowerCasedCharacters);
+    password.push(getRandom(lowerCasedCharacters));
+  }
+
+  if (options.includeUpperCasedCharacters) {
+    allCharacters = allCharacters.concat(upperCasedCharacters);
+    password.push(getRandom(upperCasedCharacters));
+  }
+
+  for (var i = password.length; i < options.length; i++) {
+    var randomChar = getRandom(allCharacters);
+    password.push(randomChar);
+  }
+
+  return password.join('');
 }
 
 // Get references to the #generate element
