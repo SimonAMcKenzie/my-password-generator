@@ -15,19 +15,25 @@ body,
 body {
   font-family: Helvetica;
   background-color: #f9fbfd;
+  background-image: url(../images/cool_white_background_marble_effect_all_brillia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This will make the background fixed when scrolling */
 }
 
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 20px; /* Add margin to the top of the wrapper */
+  margin-bottom: 20px; /* Add margin to the bottom of the wrapper */
 }
 
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(203, 15%, 10%);
 }
 
 .card {
@@ -47,7 +53,7 @@ header {
   display: block;
   width: 100%;
   background: #e7e9eb;
-  height: 2px;
+  height: 2px;#
 }
 
 .card-body {
@@ -91,6 +97,10 @@ header {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Change background color on hover */
 }
 
 .float-right {
