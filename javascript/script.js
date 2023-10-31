@@ -23,12 +23,12 @@ var generateBtn = document.querySelector('#generate');
 var passwordText = document.querySelector('#password');
 
 // Add event listener to slider input
-lengthSlider.addEventListener('input', function() {
+lengthSlider.addEventListener('input', function () {
   lengthValue.textContent = lengthSlider.value;
 });
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', function() {
+generateBtn.addEventListener('click', function () {
   var length = parseInt(lengthSlider.value) || 8; // Default length is set to 8 characters
   var includeSpecialCharacters = document.querySelector('#specialCharactersCheckbox').checked;
   var includeNumericCharacters = document.querySelector('#numericCharactersCheckbox').checked;
@@ -77,12 +77,12 @@ function generatePasswordWithOptions(options) {
 var copyBtn = document.querySelector('#copy');
 
 // Add event listener to copy button
-copyBtn.addEventListener('click', function() {
+copyBtn.addEventListener('click', function () {
   var generatedPassword = passwordText.value;
   if (generatedPassword) {
-    navigator.clipboard.writeText(generatedPassword).then(function() {
+    navigator.clipboard.writeText(generatedPassword).then(function () {
       alert('Password copied to clipboard!');
-    }).catch(function(err) {
+    }).catch(function (err) {
       console.error('Failed to copy text: ', err);
     });
   } else {
