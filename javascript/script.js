@@ -1,28 +1,6 @@
 // Array of special characters to be included in password
 var specialCharacters = [
-  '@',
-  '%',
-  '+',
-  '\\',
-  '/',
-  "'",
-  '!',
-  '#',
-  '$',
-  '^',
-  '?',
-  ':',
-  ',',
-  ')',
-  '(',
-  '}',
-  '{',
-  ']',
-  '[',
-  '~',
-  '-',
-  '_',
-  '.'
+  '@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'
 ];
 
 // Array of numeric characters to be included in password
@@ -30,84 +8,32 @@ var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
 var lowerCasedCharacters = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z'
+  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ];
 
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ];
 
-// Function to prompt user for password options
+// Get references to the elements
+var lengthSlider = document.querySelector('#passwordLength');
+var lengthValue = document.querySelector('#passwordLengthValue');
+var generateBtn = document.querySelector('#generate');
+var passwordText = document.querySelector('#password');
 
-function getPasswordOptions() { // This creates the prompt the user sees
-  var length = parseInt(prompt("Enter password length (between 8 and 128 characters):"));
+// Add event listener to slider input
+lengthSlider.addEventListener('input', function() {
+  lengthValue.textContent = lengthSlider.value;
+});
 
-  if (isNaN(length) || length < 8 || length > 128) { // This defines the min and max password character limit
-    alert("Password length must be a number between 8 and 128.");
-    return null;
-  }
-
-  // Below are array lists for each type of character to be included in the password
-  includeSpecialCharacters = confirm("Include special characters?"),
-  includeNumericCharacters = confirm("Include numeric characters?"),
-  includeLowerCasedCharacters = confirm("Include lowercase characters?"),
-  includeUpperCasedCharacters = confirm("Include uppercase characters?")
-
-if (!includeSpecialCharacters && !includeNumericCharacters && !includeLowerCasedCharacters && !includeUpperCasedCharacters) {
-    alert("Must include at least 1 character from each character type.");
-    return null;
-}
+// Add event listener to generate button
+generateBtn.addEventListener('click', function() {
+  var length = parseInt(lengthSlider.value) || 8; // Default length is set to 8 characters
+  var includeSpecialCharacters = document.querySelector('#specialCharactersCheckbox').checked;
+  var includeNumericCharacters = document.querySelector('#numericCharactersCheckbox').checked;
+  var includeLowerCasedCharacters = document.querySelector('#lowercaseCharactersCheckbox').checked;
+  var includeUpperCasedCharacters = document.querySelector('#uppercaseCharactersCheckbox').checked;
 
   var passwordOptions = {
     length: length,
@@ -117,47 +43,29 @@ if (!includeSpecialCharacters && !includeNumericCharacters && !includeLowerCased
     includeUpperCasedCharacters: includeUpperCasedCharacters
   };
 
-  return passwordOptions;
-}
+  var password = generatePasswordWithOptions(passwordOptions);
+  passwordText.value = password;
+});
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  var randomIndex = Math.floor(Math.random() * arr.length);
-  return arr[randomIndex];
-}
-
-// Function to generate password with user input
-function generatePassword() {
-  var options = getPasswordOptions();
-
-  if (!options) {
-    return "";
-  }
-
+// Function to generate password with custom options
+function generatePasswordWithOptions(options) {
   var allCharacters = [];
-  var password = [];
-
+  // Add characters based on options
   if (options.includeSpecialCharacters) {
     allCharacters = allCharacters.concat(specialCharacters);
-    password.push(getRandom(specialCharacters));
   }
-
   if (options.includeNumericCharacters) {
     allCharacters = allCharacters.concat(numericCharacters);
-    password.push(getRandom(numericCharacters));
   }
-
   if (options.includeLowerCasedCharacters) {
     allCharacters = allCharacters.concat(lowerCasedCharacters);
-    password.push(getRandom(lowerCasedCharacters));
   }
-
   if (options.includeUpperCasedCharacters) {
     allCharacters = allCharacters.concat(upperCasedCharacters);
-    password.push(getRandom(upperCasedCharacters));
   }
 
-  for (var i = password.length; i < options.length; i++) {
+  var password = [];
+  for (var i = 0; i < options.length; i++) {
     var randomChar = getRandom(allCharacters);
     password.push(randomChar);
   }
@@ -165,16 +73,8 @@ function generatePassword() {
   return password.join('');
 }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
+// Function to get a random element from an array
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
