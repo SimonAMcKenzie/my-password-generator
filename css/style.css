@@ -7,15 +7,15 @@
 html,
 body,
 .wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  /* height: 90%; */
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 body {
   font-family: Helvetica;
   background-color: #f9fbfd;
-  background-image: url(../images/cool_white_background_marble_effect_all_brillia.jpg);
+  background-image: url(../images/white-hd-1920-x-1200-background-w5xsbyermln13aks.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; /* This will make the background fixed when scrolling */
@@ -33,11 +33,12 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(203, 15%, 10%);
+  color: #af0808;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsla(0, 0%, 100%, 0.701);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -61,7 +62,7 @@ header {
 }
 
 .card-footer {
-  text-align: center;
+  text-align: center; 
 }
 
 .card-footer::before {
@@ -80,7 +81,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: #af0808;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -100,7 +101,7 @@ button[disabled] {
 }
 
 .btn:hover {
-  background-color: #45a049; /* Change background color on hover */
+  background-color: #0075FF; /* Change background color on hover */
 }
 
 .float-right {
@@ -114,10 +115,10 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
+  padding-bottom: 50px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
