@@ -1,26 +1,31 @@
+/* Apply box-sizing border-box model to all elements, including ::before and ::after pseudo-elements */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Set default styles for the HTML, body, and wrapper elements */
 html,
 body,
 .wrapper {
+  /* Set 90% height for the body, add margin at the bottom, and center text alignment */
   /* height: 90%; */
   margin-bottom: 10px;
   text-align: center;
 }
 
+/* Set font family, background color, and background image for the body */
 body {
   font-family: Helvetica;
   background-color: #f9fbfd;
   background-image: url(../images/white-hd-1920-x-1200-background-w5xsbyermln13aks.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This will make the background fixed when scrolling */
+  background-attachment: fixed; /* Make the background fixed when scrolling */
 }
 
+/* Set padding, margin, and color for the wrapper element */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -29,6 +34,7 @@ body {
   margin-bottom: 20px; /* Add margin to the bottom of the wrapper */
 }
 
+/* Style the header element with text alignment, padding, color, and text shadow */
 header {
   text-align: center;
   padding: 20px;
@@ -37,6 +43,7 @@ header {
   text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Style the card element with background color, border-radius, border width, box shadow, color, font size, margin, maximum width, and padding */
 .card {
   background-color: hsla(0, 0%, 100%, 0.701);
   border-radius: 5px;
@@ -49,6 +56,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Style the card header element with background color and height */
 .card-header::after {
   content: " ";
   display: block;
@@ -57,14 +65,17 @@ header {
   height: 2px;#
 }
 
+/* Style the card body with minimum height */
 .card-body {
   min-height: 100px;
 }
 
+/* Style the card footer with text alignment */
 .card-footer {
   text-align: center; 
 }
 
+/* Style the card footer's before and after pseudo-elements with background color and height */
 .card-footer::before {
   content: " ";
   display: block;
@@ -79,12 +90,12 @@ header {
   clear: both;
 }
 
+/* Style the button element with border, background color, border radius, box shadow, color, display, font size, line height, margin, padding, text alignment, and cursor */
 .btn {
   border: none;
   background-color: #af0808;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -95,19 +106,23 @@ header {
   cursor: pointer;
 }
 
+/* Style the disabled button with default cursor and background color */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/* Change button background color on hover */
 .btn:hover {
-  background-color: #0075FF; /* Change background color on hover */
+  background-color: #0075FF;
 }
 
+/* Style the float-right class with float property */
 .float-right {
   float: right;
 }
 
+/* Style the password input with appearance, border, width, padding, font size, text alignment, margin, border radius, resize, and overflow properties */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -129,7 +144,9 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Media query for screen widths up to 690px */
 @media (max-width: 690px) {
+  /* Style the button and password input with reduced font size, margin, and padding */
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -141,7 +158,9 @@ button[disabled] {
   }
 }
 
+/* Media query for screen widths up to 500px */
 @media (max-width: 500px) {
+  /* Style the button with further reduced font size */
   .btn {
     font-size: 0.8rem;
   }
