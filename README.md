@@ -1,111 +1,83 @@
-# Module 5 Challenge: Password Generator
+# My Password Generator Application
 
 ## Overview
+This project involved making a password generator application operational and user friendly so that users can generate random passwords based on specific criteria. The application runs in the browser and features a clean and responsive user interface. Users can select the length of the password and specify whether it should include uppercase letters, lowercase letters, numbers, and special characters.
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+## Motivation
+The motivation behind this project is to provide a secure and easy-to-use tool for generating strong passwords. With an increase in brute force attacks, having a reliable password generator is essential for individuals and organizations to create robust passwords that enhance their digital security.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+## Project Scope
+The project involves building a password generator application that meets specific requirements, including length validation, character type selection, and error handling. The application should provide an intuitive user experience and generate passwords that adhere to the selected criteria.
 
-## Instructions
+## Key Features
+- **Password Length Selection:** Users can specify the desired length of the generated password (between 8 and 128 characters).
+- **Character Type Selection:** Users can choose to include uppercase letters, lowercase letters, numbers, and special characters in the generated password.
+- **Validation and Error Handling:** The application validates user inputs and ensures that at least one character type is selected. Error messages are displayed to guide users.
+- **Responsive Design:** The user interface is designed to be responsive, adapting to various screen sizes and devices.
+- **Copy to Clipboard:** The generated password can be easily copied to the clipboard for convenient use.
 
-The following image shows the web application's appearance and functionality:
+## Technologies Used
+- **HTML:** Structuring the web page and creating user interface elements.
+- **CSS:** Styling the user interface and ensuring a visually appealing design.
+- **JavaScript:** Implementing the password generation logic, user input validation, and dynamic content updates.
+- **GitHub:** Hosting the project repository and enabling version control.
+- **GitHub Pages:** Deploying the application online for easy access.
 
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+## Future Enhancements
+- **Password Strength Indicator:** Implement a feature to evaluate the strength of the generated password (weak, medium, strong) based on established criteria.
+- **User Profiles:** Allow users to create profiles with specific password generation preferences and save their generated passwords securely.
+- **Password History:** Implement a history feature that stores previously generated passwords for reference.
+- **Integration with Password Managers:** Provide an option to export generated passwords to popular online password management tools and cold wallets
 
+## Screenshot and Links to Deployed Application
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 8 characters but no more than 128.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+- ![Full Landing Page](/assets/images/screenshot.PNG)
 
-## Grading Requirements
+- [My Password Generator Application](#) *(https://simonamckenzie.github.io/my-password-generator/)*
+- [GitHub Repository](#) *(https://github.com/SimonAMcKenzie/my-password-generator)*
 
-This challenge is graded based on the following criteria: 
+## Conclusion
+The Password Generator Application offers a reliable solution for creating strong and secure passwords tailored to individual preferences. By adhering to best practices in web development and user experience design, the application provides a user-friendly interface for generating passwords while promoting online security.
 
-### Technical Acceptance Criteria: 40%
+## Installation
+No installation is required to use the Password Generator Application. Simply access the provided URL in your web browser to start generating secure passwords.
 
-* Satisfies all of the above acceptance criteria plus the following:
+## Usage
+1. Visit the deployed Password Generator Application URL.
+2. Specify the desired password length using the slider.
+3. Select the character types to include in the password (uppercase, lowercase, numbers, special characters) by checking the corresponding checkboxes.
+4. Click the "Generate Password" button to generate a password based on the specified criteria.
+5. If an error message appears, review the message and make the necessary adjustments (e.g., select at least one character type, choose a valid password length).
+6. Once a password is generated, it will be displayed in the designated area. Click the "Copy Password" button to copy the password to your clipboard for immediate use.
 
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
+## Credits
 
-### Deployment: 32%
+### Arrays in JavaScript:
 
-* Application deployed at live URL.
+- **[MDN Web Docs - Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array):** MDN Web Docs provide comprehensive information on JavaScript arrays, including how to create and manipulate arrays.
 
-* Application loads with no errors.
+### Functions in JavaScript:
 
-* Application GitHub URL submitted.
+- **[MDN Web Docs - Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions):** MDN Web Docs offer detailed explanations about JavaScript functions, including how to define and use them.
 
-* GitHub repository that contains application code.
+### User Input in JavaScript:
 
-### Application Quality: 15%
+- **[MDN Web Docs - Window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt):** Learn how to use the prompt() function to get user input from MDN Web Docs.
 
-* Application user experience is intuitive and easy to navigate.
+### Random Number Generation in JavaScript:
 
-* Application user interface style is clean and polished.
+- **[MDN Web Docs - Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random):** MDN Web Docs explain how to generate random numbers using the Math.random() function.
 
-* Application resembles the mock-up functionality provided in the challenge instructions.
+### DOM Manipulation in JavaScript:
 
-### Repository Quality: 13%
+- **[MDN Web Docs - Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model):** Understand the basics of DOM manipulation in JavaScript from MDN Web Docs.
 
-* Repository has a unique name.
+### HTML and CSS Basics:
 
-* Repository follows best practices for file structure and naming conventions.
+- **[MDN Web Docs - HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/HTML):** Learn the basics of HTML, the structure of web pages, from MDN Web Docs.
+- **[MDN Web Docs - CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/CSS):** Understand the fundamentals of CSS, the language used for styling web pages, from MDN Web Docs.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+### How TO - Range Sliders:
 
-* Repository contains multiple descriptive commit messages.
+- **[W3Schools - Range Sliders](https://www.w3schools.com/howto/howto_js_rangeslider.asp):** Learn how to create custom range sliders with CSS and JavaScript.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-
-#My Password Generator Project
-
-
-
-##Credits
-
-Arrays in JavaScript:
-
-MDN Web Docs - Arrays: MDN Web Docs provide comprehensive information on JavaScript arrays, including how to create and manipulate arrays.
-
-Functions in JavaScript:
-
-MDN Web Docs - Functions: MDN Web Docs offer detailed explanations about JavaScript functions, including how to define and use them.
-
-User Input in JavaScript:
-
-MDN Web Docs - Window.prompt(): Learn how to use the prompt() function to get user input from MDN Web Docs.
-
-Random Number Generation in JavaScript:
-
-MDN Web Docs - Math.random(): MDN Web Docs explain how to generate random numbers using the Math.random() function.
-
-DOM Manipulation in JavaScript:
-
-MDN Web Docs - Document Object Model (DOM): Understand the basics of DOM manipulation in JavaScript from MDN Web Docs.
-
-HTML and CSS Basics:
-
-MDN Web Docs - HTML Basics: Learn the basics of HTML, the structure of web pages, from MDN Web Docs.
-
-MDN Web Docs - CSS Basics: Understand the fundamentals of CSS, the language used for styling web pages, from MDN Web Docs.
