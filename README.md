@@ -31,7 +31,7 @@ The project involves building a password generator application that meets specif
 
 ## Screenshot and Links to Deployed Application
 
-- ![Full Landing Page](/assets/images/screenshot.PNG)
+- ![Full Landing Page](/images/my_password_generator_screenshot.png)
 
 - [My Password Generator Application](#) *(https://simonamckenzie.github.io/my-password-generator/)*
 - [GitHub Repository](#) *(https://github.com/SimonAMcKenzie/my-password-generator)*
