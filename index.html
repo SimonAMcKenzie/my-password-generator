@@ -10,43 +10,54 @@
 </head>
 
 <body>
+  <!-- Wrapper for the entire content -->
   <div class="wrapper">
+    <!-- Header section containing the title -->
     <header>
       <h1>Password Generator</h1>
     </header>
+    <!-- Card element to contain password generation form and buttons -->
     <div class="card">
+      <!-- Card header with title -->
       <div class="card-header">
         <h2>Generate a Password</h2>
       </div>
+      <!-- Card body containing the password display area -->
       <div class="card-body">
+        <!-- Textarea to display the generated password -->
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
       </div>
+      <!-- Card footer with customization options and buttons -->
       <div class="card-footer">
+        <!-- Customization options for password length, special characters, numeric characters, lowercase characters, and uppercase characters -->
         <div class="customization-row">
-          <label for="passwordLength">Length: <span id="passwordLengthValue">8</span></label>
+          <label for="passwordLength">Password Length: <span id="passwordLengthValue">8</span></label>
           <input type="range" id="passwordLength" min="8" max="128" step="1" value="8">
         </div>
         <div class="customization-row">
-          <label>Special Characters:</label>
+          <label>Include Special Characters:</label>
           <input type="checkbox" id="specialCharactersCheckbox">
         </div>
         <div class="customization-row">
-          <label>Numbers:</label>
+          <label>Include Numeric Characters:</label>
           <input type="checkbox" id="numericCharactersCheckbox">
         </div>
         <div class="customization-row">
-          <label>Lowercase:</label>
+          <label>Include Lowercase Characters:</label>
           <input type="checkbox" id="lowercaseCharactersCheckbox">
         </div>
         <div class="customization-row">
-          <label>Uppercase:</label>
+          <label>Include Uppercase Characters:</label>
           <input type="checkbox" id="uppercaseCharactersCheckbox">
         </div>
+        <!-- Buttons to generate password and copy generated password -->
         <button id="generate" class="btn">Generate Password</button>
         <button id="copy" class="btn">Copy Password</button>
       </div>
     </div>
-    <script src="./javascript/script.js"></script>
+  </div>
+  <!-- JavaScript file to handle password generation logic -->
+  <script src="./javascript/script.js"></script>
 </body>
 
 </html>
