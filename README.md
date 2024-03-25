@@ -21,7 +21,7 @@ Clone the empty repository to your local machine using Git. Navigate to the desi
 
 bash
 Copy code
-``` git clone <repository_url> ```
+``` git clone <[My Password Generator](https://github.com/SimonAMcKenzie/my-password-generator.git)> ```
 
 3. Create File Structure: Organize your project files into appropriate directories. You should have directories for `css`, `javascript`, and `images`, along with an `index.html` file at the root level.
 4. Copy CSS Styles: Copy the CSS styles provided into a new file named `style.css` within the `css` directory.
