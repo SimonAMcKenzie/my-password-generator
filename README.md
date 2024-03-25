@@ -4,7 +4,7 @@
 This project involved making a password generator application operational and user friendly so that users can generate random passwords based on specific criteria. The application runs in the browser and features a clean and responsive user interface. Users can select the length of the password and specify whether it should include uppercase letters, lowercase letters, numbers, and special characters.
 
 ## Motivation
-The motivation behind this project is to provide a secure and easy-to-use tool for generating strong passwords. With an increase in brute force attacks, having a reliable password generator is essential for individuals and organizations to create robust passwords that enhance their digital security.
+The motivation behind this project is to provide a secure and easy-to-use tool for generating strong passwords. With an increase in brute force attacks, having a reliable password generator is essential for individuals and organisations to create robust passwords that enhance their digital security.
 
 ## Project Scope
 The project involves building a password generator application that meets specific requirements, including length validation, character type selection, and error handling. The application should provide an intuitive user experience and generate passwords that adhere to the selected criteria.
@@ -52,7 +52,7 @@ To run the Password Generator application:
 6. Once a password is generated, it will be displayed in the designated area. Click the "Copy Password" button to copy the password to your clipboard for immediate use.
    
 ### Conclusion
-With these steps, you can set up and understand the Password Generator project. It provides a secure and user-friendly tool for generating strong passwords tailored to individual preferences.
+With these steps, you can set up and understand the Password Generator project. It provides a secure and user-friendly tool for generating strong passwords tailored to individual preferences, conforms to WCAG 2.1 standards, and is responsive across devices.
 
 For any further enhancements or modifications, refer to the respective files and modify the code accordingly.
 
@@ -84,9 +84,6 @@ Feel free to reach out for any assistance or clarification. Happy password gener
 
 - [My Password Generator Application](#) *(https://simonamckenzie.github.io/my-password-generator/)*
 - [GitHub Repository](#) *(https://github.com/SimonAMcKenzie/my-password-generator)*
-
-## Conclusion
-The Password Generator Application offers a reliable solution for creating strong and secure passwords tailored to individual preferences. By adhering to best practices in web development and user experience design, the application provides a user-friendly interface for generating passwords while promoting online security.
 
 ## Installation
 No installation is required to use the Password Generator Application. Simply access the provided URL in your web browser to start generating secure passwords.
